@@ -37,7 +37,6 @@ const PaymentForm = () => {
         if (!validateForm()) return;
         
         setLoading(true);
-        const order_id = 'ORD_' + Date.now();
 
         try {
             const response = await fetch("/api/create-order", {
